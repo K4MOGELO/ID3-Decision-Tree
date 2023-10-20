@@ -1,46 +1,34 @@
-# ID3 Algorithm - Decision Tree
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Assignment Overview](#assignment-overview)
-- [Usage](#usage)
-- [Implementation Details](#implementation-details)
-- [Data](#data)
-- [Contributing](#contributing)
-- [License](#license)
+# Student Performance Prediction with the ID3 Algorithm
 
 ## Introduction
 
-Welcome to the "ID3 Algorithm - Decision Tree" project repository. This project focuses on implementing the ID3 (Iterative Dichotomiser 3) algorithm to construct a decision tree, which is a powerful tool for predictive modeling and classification. The primary application for this project is the prediction of student performance based on various factors such as study hours, attendance, and previous grades.
-
-## Assignment Overview
-
-The assignment associated with this project is to develop a decision tree using the ID3 algorithm. The assignment guidelines are as follows:
-
-- The implementation of the Decision tree should be in a programming language of your choice.
-- You have the freedom to choose the dataset for your implementation.
-- You can refer to Section 10.3 of the textbook for guidance on implementing a decision tree. Additionally, you can follow the example demonstrated in class to print the decision tree.
-
-All the best in completing your assignment!
-
-## Usage
-
-[Provide instructions on how to use your code, run the decision tree model, and interpret the results.]
-
-## Implementation Details
-
-[Explain the implementation details of the ID3 algorithm, how the decision tree is constructed, and any relevant technical information.]
+This project aims to predict whether a student will pass or fail an exam by leveraging the ID3 (Iterative Dichotomiser 3) algorithm, a powerful tool for predictive modeling and classification. We recognized the challenge of student performance and chose to develop a decision tree model to offer early predictions and support for those at risk.
 
 ## Data
+For our student performance prediction model, we utilize a dataset that includes the following information:
 
-[Describe the dataset you have used for this project, including its source and any relevant details about the data.]
+```python
+data = {
+    'id': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+    'Study Hours': ['2-4 hours', '1-2 hours', '2-4 hours', '5+ hours', '5+ hours',
+                    '1-2 hours', '2-4 hours', '2-4 hours', '1-2 hours', '5+ hours',
+                    '2-4 hours', '1-2 hours', '1-2 hours', '2-4 hours', '1-2 hours',
+                    '2-4 hours', '1-2 hours', '5+ hours', '2-4 hours', '2-4 hours'],
+    'Attendance': ['low', 'average', 'high', 'average', 'high', 'average', 'high', 'high', 'average', 'low',
+                    'high', 'low', 'high', 'high', 'average', 'high', 'low', 'high', 'high', 'low'],
+    'Previous Grade': ['bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad',
+                       'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad'],
+    'Passed': ['No', 'No', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'Yes', 'No', 'Yes',
+               'Yes', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'Yes', 'Yes']
+} 
+```
 
-## Contributing
+## Output
+Just run the code,lol
+there are some pip stuff that u gotta do before it could run...i think pip install pandas yeah 
 
-[Explain how others can contribute to your project, whether through code contributions, issue reporting, or feature requests.]
+## Contribution
+Group Project but we all know what happens in school groups. Luckily my boy GPT helped there and there, sent code full of errors but hey, **Why spend a few hours writing the code when you can spend the entire night debugging it?**
 
 ## License
-
-[Specify the license under which your project is distributed.]
-
+uhm.....gnu license?idk havent reached that level yet
