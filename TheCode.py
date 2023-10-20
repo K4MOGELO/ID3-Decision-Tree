@@ -11,6 +11,7 @@ class Node:
         self.entropy = None
         self.information_gain = None
 
+# Function to calculate entropy
 def entropy(data):
     labels = data['Passed'].values
     label_counts = Counter(labels)
@@ -18,6 +19,7 @@ def entropy(data):
     entropy = -sum((count / total_samples) * np.log2(count / total_samples) for count in label_counts.values())
     return entropy
 
+# Function to calculate information gain
 def information_gain(data, feature):
     total_entropy = entropy(data)
     unique_values = data[feature].unique()
@@ -32,6 +34,7 @@ def information_gain(data, feature):
     information_gain = total_entropy - weighted_entropy
     return information_gain
 
+# ID3 algorithm for decision tree construction
 def id3(data, features):
     if len(set(data['Passed'])) == 1:
         return Node(label=data['Passed'].values[0])
@@ -70,6 +73,7 @@ def id3(data, features):
 
     return node
 
+# Sample data
 data = {
     'id': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
     'Study Hours': ['2-4 hours', '1-2 hours', '2-4 hours', '5+ hours', '5+ hours',
@@ -84,16 +88,20 @@ data = {
                'Yes', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'Yes', 'Yes']
 }
 
+# Create a DataFrame
 df = pd.DataFrame(data)
 features = ['Study Hours', 'Attendance', 'Previous Grade']
+
+# Build the decision tree
 decision_tree = id3(df, features)
 
+# Function to print the decision tree structure
 def print_tree(node, indent="", is_last_child=True):
     if node.label:
         label_str = "Class: " + node.label
         print(indent + label_str)
     else:
-        feature_str = "column: " + node.feature
+        feature_str = "Column: " + node.feature
         print(indent + feature_str)
 
         child_count = len(node.children)
@@ -103,4 +111,5 @@ def print_tree(node, indent="", is_last_child=True):
             print(indent + ("└── " if is_last else "├── ") + value_str)
             print_tree(child, indent + ("    " if is_last else "│   "), is_last)
 
+# Print the decision tree structure
 print_tree(decision_tree)
