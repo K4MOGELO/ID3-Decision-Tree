@@ -23,9 +23,6 @@ data = {
 } 
 ```
 
-## Output
-Just run the code,lol
-there are some pip stuff that u gotta do before it could run...i think pip install pandas yeah 
 
 ## Contribution
 Group Project but we all know what happens in school groups. Luckily my boy GPT helped there and there, sent code full of errors but hey, **Why spend a few hours writing the code when you can spend the entire night debugging it?**
